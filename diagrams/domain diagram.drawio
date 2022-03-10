@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="W5ZfDLvo8_gCMa8vNS1i" name="Page-1">
-        <mxGraphModel dx="1943" dy="1751" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1231" dy="1327" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -24,6 +24,9 @@
                     <mxGeometry x="-0.7824" relative="1" as="geometry">
                         <mxPoint x="12" as="offset"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="29" value="" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;elbow=vertical;html=1;labelBackgroundColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;strokeColor=default;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="dLR3dukY0bsqCnxzX5Ph-20" target="28">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="dLR3dukY0bsqCnxzX5Ph-20" value="OKR" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" parent="1" vertex="1">
                     <mxGeometry x="210" y="220" width="140" height="54" as="geometry"/>
@@ -251,7 +254,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="dLR3dukY0bsqCnxzX5Ph-67" value="&lt;h1&gt;why wrapping in an okr class ? (design decision)&lt;/h1&gt;&lt;p&gt;since okrs needs to be approved we can't set an objective for approval because It causes confusion between parent, child, and nested objective&lt;/p&gt;&lt;p&gt;same with sessions, it is not set directrly to an objective but rather to an OKR, cause an objective can be a key result of another objective there for, the session (time periode) will be applyed to both&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;sketch=1;" parent="1" vertex="1">
-                    <mxGeometry x="425" y="-100" width="465" height="170" as="geometry"/>
+                    <mxGeometry x="394.87" y="-80" width="465" height="170" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" style="edgeStyle=elbowEdgeStyle;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;endArrow=none;endFill=0;rounded=1;" edge="1" parent="1" source="dLR3dukY0bsqCnxzX5Ph-77">
                     <mxGeometry relative="1" as="geometry">
@@ -273,7 +276,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="dLR3dukY0bsqCnxzX5Ph-121" value="Chart" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="180" y="106" width="140" height="54" as="geometry"/>
+                    <mxGeometry x="210" y="110" width="140" height="54" as="geometry"/>
                 </mxCell>
                 <mxCell id="dLR3dukY0bsqCnxzX5Ph-130" value="" style="endArrow=classic;html=1;labelBackgroundColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;strokeColor=default;shape=connector;elbow=vertical;entryX=0.413;entryY=1.02;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0;exitDx=0;exitDy=0;curved=1;" parent="1" source="dLR3dukY0bsqCnxzX5Ph-20" target="dLR3dukY0bsqCnxzX5Ph-67" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -284,6 +287,25 @@
                             <mxPoint x="465" y="170"/>
                         </Array>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;elbow=vertical;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;strokeColor=default;" edge="1" parent="1" source="18" target="dLR3dukY0bsqCnxzX5Ph-36">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" connectable="0" parent="19">
+                    <mxGeometry x="-0.5192" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" connectable="0" parent="19">
+                    <mxGeometry x="0.7838" y="-2" relative="1" as="geometry">
+                        <mxPoint y="10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="Data source" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="630" y="600" width="140" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Status" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="140" width="140" height="54" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
