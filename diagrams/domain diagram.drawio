@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-10T10:50:33.002Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="yrPwEIVzGFfmyuPMysOn" version="17.0.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-10T10:51:27.304Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="X96CVeXqLRGeTFFOdSmB" version="17.0.0" type="github">
   <diagram id="W5ZfDLvo8_gCMa8vNS1i" name="Page-1">
     <mxGraphModel dx="2049" dy="1825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -214,7 +214,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="dLR3dukY0bsqCnxzX5Ph-67" value="&lt;h1&gt;why wrapping in an okr class ? (design decision)&lt;/h1&gt;&lt;p&gt;since okrs needs to be approved we can&#39;t set an objective for approval because It causes confusion between parent, child, and nested objective&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;sketch=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="-100" width="220" height="200" as="geometry" />
+          <mxGeometry x="425" y="-100" width="220" height="200" as="geometry" />
         </mxCell>
         <mxCell id="dLR3dukY0bsqCnxzX5Ph-77" value="Team" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
           <mxGeometry x="-130" y="385" width="90" height="54" as="geometry" />
