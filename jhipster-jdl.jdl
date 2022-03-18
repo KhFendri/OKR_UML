@@ -1,0 +1,170 @@
+
+entity Session {
+    sessionID String,
+    sessionTitle String,
+    sessionStartDate LocalDate,
+    sessionEndDate LocalDate,
+	sessionType SessionType
+}
+// entity OKR {
+//     okrID String,
+//     okrTitle String,
+// 	okrStatus OkrStatus,
+//     okrScore Float
+// }
+entity Badge {
+    badgeID String,
+    badgeName String
+}
+entity User {
+    userID String,
+    userName String
+}
+entity Team {
+    teamID String,
+    teamName String
+}
+entity Objective {
+    objID String ,
+    objTitle String,
+    objDesc String
+    okrStatus OkrStatus
+}
+entity KeyResult {
+    krID String,
+	krTitle String,
+	krDesc String,
+    krDeadlineType KrDeadlineType,
+    krType KrType,
+	krDeadlineDate LocalDate,
+	krInitNumber Float,
+	krTargetNumber Float
+}
+
+// application {
+//     config {
+//         skipUserManagement true
+//     }
+// }
+
+/* entity Metric {
+
+}
+entity DefindMetric {
+	
+}
+entity AutoMetric {
+	
+}
+entity IntegratedKPI {
+	
+}
+ */
+entity Task {
+    taskID String,
+	taskTitle String,
+	taskDesc String,
+	taskStatus TaskStatus
+}
+entity Unit {
+    unitID String,
+    unitTitle String,
+    unitsymbol UnitSymbol
+}
+entity Comment {
+    commentID String,
+	commentBody String,
+	commentDate LocalDate
+}
+entity ContributionTable {
+    contributionTableID String,
+    contributionTableName String
+}
+
+
+//ENUMS********************************************
+enum SessionType {
+    ANNUAL, BIANNUAL, QUARTER, MONTHLY
+}
+enum OkrStatus {
+    DRAFT, INREVIEW, APPROVED, ARCHIVED
+}
+enum TaskStatus {
+    NA
+}
+enum KrDeadlineType {
+    NO_CUSTOM_DEAD_LINE, HARD_DEADLINE, HARD_AND_SOFT_DEADLINE
+}
+enum KrType {
+    SHOULD_INCREASE_TO, SHOULD_DECREASE_TO, SHOULD_STAY_ABOVE, SHOULD_STAY_BELOW, ACHIEVED_OR_NOT
+}
+enum UnitSymbol {
+    PERCENTAGE, DOLLAR, EURO, POUND, CUSTOM
+}
+//RELATIONSHIPS**********************************
+/**
+ * Many to one relationship.
+ */
+relationship ManyToOne {
+    Session{owner} to User{assignedSessions}, 
+    Session to Session{sessions},
+    Objective{session} to Session{okr},
+    Objective{approver} to User{okrSubmissions},
+    Session{approver} to User{sessionSubmissions},
+    //OKR{objective} to Objective,
+    Objective to Objective{objectives},
+    KeyResult{objective} to Objective{keyResult},
+    Task{keyResult} to KeyResult{task}
+}
+/**
+ * Many to many relationship.
+ */
+relationship ManyToMany {
+    User{assignedObjectives} to Objective{owner},
+    User{assignedKR} to KeyResult{owner},
+    User{assignedTask} to Task{owner},
+    Team{assignedObjectives} to Objective{owner},
+    Team{assignedKR} to KeyResult{owner},
+    Team{assignedTask} to Task{owner}
+}
+/**
+ * One to one relationship.
+ */
+relationship OneToOne {
+    KeyResult{unit} to Unit{keyResult}
+}
+
+// application {
+//   config {
+//     baseName okrService,
+//     applicationType microservice,
+//     packageName com.myapp,
+//     authenticationType jwt,
+//     prodDatabaseType mysql,
+//   }
+//   entities Session, Objective, KeyResult, Unit, Task
+// }
+
+
+
+// application {
+//   config {
+//     baseName userService,
+//     applicationType microservice,
+//     packageName com.myapp,
+//     authenticationType jwt,
+//     prodDatabaseType mysql,
+//   }
+//   entities User, Team
+// }
+
+// application {
+//   config {
+//     baseName gamificationService,
+//     applicationType microservice,
+//     packageName com.myapp,
+//     authenticationType jwt,
+//     prodDatabaseType mysql,
+//   }
+//   entities Badge, ContributionTable
+// }
