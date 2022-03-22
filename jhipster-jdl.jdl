@@ -47,19 +47,19 @@ entity KeyResult {
 //     }
 // }
 
-/* entity Metric {
+// entity Metric {
+//     metricID String
+// }
+// entity DefindMetric {
+	
+// }
+// entity AutoMetric {
+	
+// }
+// entity IntegratedKPI {
+	
+// }
 
-}
-entity DefindMetric {
-	
-}
-entity AutoMetric {
-	
-}
-entity IntegratedKPI {
-	
-}
- */
 entity Task {
     taskID String,
 	taskTitle String,
@@ -123,15 +123,18 @@ relationship ManyToMany {
     User{assignedObjectives} to Objective{owner},
     User{assignedKR} to KeyResult{owner},
     User{assignedTask} to Task{owner},
+    User{badges} to Badge{user}
     Team{assignedObjectives} to Objective{owner},
     Team{assignedKR} to KeyResult{owner},
     Team{assignedTask} to Task{owner}
+    Team{badges} to Badge{teams}
 }
 /**
  * One to one relationship.
  */
 relationship OneToOne {
     KeyResult{unit} to Unit{keyResult}
+    User{contributionTable} to ContributionTable{user}
 }
 
 // application {
